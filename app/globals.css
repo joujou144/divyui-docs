@@ -19,11 +19,15 @@
   }
 }
 
-/* body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-} */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
 
 html {
   height: 100%;
@@ -33,4 +37,15 @@ body {
   min-height: 100svh;
   display: flex;
   flex-direction: column;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@layer base {
+  .custom-container {
+    @apply mx-6 md:mx-auto;
+  }
 }

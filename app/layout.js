@@ -1,5 +1,5 @@
-import { Footer } from "@/components/nav/footer";
-import { Navbar } from "@/components/nav/nav-bar";
+import { Footer } from "@/components/layout/footer";
+import { Header } from "@/components/layout/header";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -22,10 +22,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable}  min-h-screen`}
       >
-        <Navbar />
-        <div className="bg-pink-300 h-full p-6">{children}</div>
+        <Header />
+        <main className="border-black border-2 mx-6">{children}</main>
         <Footer />
       </body>
     </html>
