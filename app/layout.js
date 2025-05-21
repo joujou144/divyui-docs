@@ -1,5 +1,5 @@
-import { Footer } from "@/components/footer";
-import { Navbar } from "@/components/nav-bar";
+import { Footer } from "@/components/nav/footer";
+import { Navbar } from "@/components/nav/nav-bar";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -26,7 +26,6 @@ export default function RootLayout({ children }) {
       >
         <Navbar />
         <div className="bg-pink-300 h-full p-6">{children}</div>
-
         <Footer />
       </body>
     </html>
