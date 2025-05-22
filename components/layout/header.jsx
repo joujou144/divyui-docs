@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export const Header = () => {
   return (
-    <nav className="w-full px-6 py-4 border-b-[1px] border-neutral-400">
+    <nav className="w-full px-6 py-4 shadow-lg text-violet-100">
       <div className="flex justify-between items-center py-2">
         {/* Left nav */}
         <div className="flex gap-4">

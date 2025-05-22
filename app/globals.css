@@ -46,9 +46,6 @@ a {
 }
 
 @layer base {
-  :root {
-    --border-divy-fine: 1px;
-  }
   .custom-container {
     @apply mx-6 md:mx-auto;
   }
@@ -59,10 +56,10 @@ a {
     overflow-x: auto;
     font-family: monospace;
     white-space: pre;
-    /* background-image: linear-gradient(to bottom, #fff, #fff, #fff, #243560); */
+    background-image: linear-gradient(to bottom, #fff, #d7cef9, #fff, #e6dfff);
     background-clip: text;
     -webkit-background-clip: text;
-    /* color: transparent; */
-    color: white;
+    color: transparent;
+    /* color: white; */
   }
 }
