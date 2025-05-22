@@ -1,24 +1,5 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-} */
-
 * {
   box-sizing: border-box;
 }
@@ -45,21 +26,28 @@ a {
   text-decoration: none;
 }
 
+.text-art {
+  max-width: 100%;
+  min-height: auto;
+  overflow-x: auto;
+  font-family: monospace;
+  white-space: pre;
+  background-image: linear-gradient(to bottom, #fff, #d7cef9, #fff, #e6dfff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  /* color: white; */
+}
+
 @layer base {
+  img {
+    width: auto;
+    height: auto;
+  }
+}
+
+@layer utilities {
   .custom-container {
     @apply mx-6 md:mx-auto;
-  }
-
-  .text-art {
-    max-width: 100%;
-    min-height: auto;
-    overflow-x: auto;
-    font-family: monospace;
-    white-space: pre;
-    background-image: linear-gradient(to bottom, #fff, #d7cef9, #fff, #e6dfff);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    /* color: white; */
   }
 }

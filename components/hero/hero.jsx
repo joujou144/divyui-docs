@@ -4,6 +4,8 @@ export const Hero = () => {
     <section className=" md:w-[50%] md:mx-auto flex flex-col sm:items-center sm:justify-center">
       <DivyArtASCIISVG />
 
+      <h1 className="monoton-logo">Divy UI</h1>
+
       <p className="p-4 text-[#8989be]">
         Minimalist UI components to elevate your frontend workflow. Lorem, ipsum
         dolor sit amet consectetur adipisicing elit. Suscipit, officia quasi?
