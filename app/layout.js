@@ -22,10 +22,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable}  min-h-screen`}
+        className={`${geistSans.variable} ${geistMono.variable} min-h-screen`}
       >
         <Header />
-        <main className="border-black border-2 mx-6">{children}</main>
+        <main className="m-4 md:mx-auto overflow-hidden">{children}</main>
         <Footer />
       </body>
     </html>

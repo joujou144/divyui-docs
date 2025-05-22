@@ -12,12 +12,12 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 * {
   box-sizing: border-box;
@@ -34,6 +34,7 @@ html {
 }
 
 body {
+  background: linear-gradient(to bottom, #8989be, #adade8, #dfdfde, #f7f5f2);
   min-height: 100svh;
   display: flex;
   flex-direction: column;
@@ -45,7 +46,23 @@ a {
 }
 
 @layer base {
+  :root {
+    --border-divy-fine: 1px;
+  }
   .custom-container {
     @apply mx-6 md:mx-auto;
+  }
+
+  .text-art {
+    max-width: 100%;
+    min-height: auto;
+    overflow-x: auto;
+    font-family: monospace;
+    white-space: pre;
+    /* background-image: linear-gradient(to bottom, #fff, #fff, #fff, #243560); */
+    background-clip: text;
+    -webkit-background-clip: text;
+    /* color: transparent; */
+    color: white;
   }
 }
