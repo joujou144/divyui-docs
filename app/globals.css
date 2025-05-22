@@ -9,9 +9,6 @@ html,
 body {
   padding: 0;
   margin: 0;
-}
-
-html {
   height: 100%;
 }
 
@@ -24,7 +21,7 @@ body {
     #dfdfde,
     #f7f5f2
   );
-  min-height: 100svh;
+  height: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -64,11 +61,11 @@ a {
 
 @layer utilities {
   .custom-container {
-    @apply m-6 md:mx-auto overflow-auto;
+    @apply m-6 md:mx-auto;
   }
 
   .monoton-logo {
-    @apply text-violet-50 tracking-wider;
+    @apply tracking-wider;
     font-family: "Monoton", sans-serif;
     font-weight: 400;
   }

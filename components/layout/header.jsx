@@ -14,7 +14,7 @@ export const Header = () => {
         </div>
 
         {/* Right nav */}
-        <div className="flex gap-6">
+        <div className="hidden lg:flex gap-6">
           <p>Components</p>
           <p>Docs</p>
           <p>Installation</p>
