@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
 @import "tailwindcss";
 
 * {
@@ -26,17 +27,25 @@ a {
   text-decoration: none;
 }
 
+/* ASCII banner */
 .text-art {
   max-width: 100%;
   min-height: auto;
   overflow-x: auto;
   font-family: monospace;
   white-space: pre;
-  background-image: linear-gradient(to bottom, #fff, #d7cef9, #fff, #e6dfff);
+  background-image: linear-gradient(to bottom, white, #d7cef9, white, #e6dfff);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  /* color: white; */
+
+  /* To prevent inherited styles from leaking in */
+  isolation: isolate;
+
+  /* Optional resets to guarantee stable rendering */
+  font-weight: 400;
+  font-size: 0.8rem;
+  line-height: 1.5;
 }
 
 @layer base {
@@ -48,6 +57,12 @@ a {
 
 @layer utilities {
   .custom-container {
-    @apply mx-6 md:mx-auto;
+    @apply m-6 md:mx-auto overflow-auto;
+  }
+
+  .monoton-logo {
+    @apply text-violet-50 tracking-wider;
+    font-family: "Monoton", sans-serif;
+    font-weight: 400;
   }
 }

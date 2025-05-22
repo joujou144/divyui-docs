@@ -2,14 +2,13 @@ import Link from "next/link";
 
 export const Header = () => {
   return (
-    <nav
-      role="navigation"
-      className="w-full px-6 py-4 shadow-lg text-violet-100"
-    >
-      <div className="flex justify-between items-center py-2">
+    <nav role="navigation" className="w-full py-4 shadow-lg text-violet-50">
+      <div className="flex justify-between items-center py-2 mx-6">
         {/* Left nav */}
         <div>
-          <Link href="/">DivyUI</Link>
+          <Link href="/" className="monoton-logo text-lg">
+            Divy UI
+          </Link>
           {/* <Link>Components</Link> */}
           <span className="ml-6">v.3.0</span>
         </div>

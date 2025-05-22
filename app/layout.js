@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className="min-h-screen">
         <Header />
-        <main className="m-4 md:mx-auto overflow-hidden">{children}</main>
+        <main className="custom-container">{children}</main>
         <Footer />
       </body>
     </html>
