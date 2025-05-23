@@ -21,10 +21,10 @@ export const Hero = () => {
     // </section>
     <section className="relative">
       <DivyArtASCIISVG ref={elRef} viewBox={viewBox} />
-      <div className="text-white absolute top-[20%] text-center w-full">
-        <h1 className="monoton text-xl lg:text-[4rem]">Divy UI</h1>
+      <div className="hero-text text-violet-50">
+        <h1 className="monoton hero-divy">Divy UI</h1>
 
-        <p className="font-semibold leading-5 md:leading-7 text-sm md:text-xl lg:text-[2.5rem] max-w-full mx-auto">
+        <p className="nunito-semibold hero-sub">
           Minimalist UI components to elevate your frontend workflow for
           building accessible web applications.
         </p>

@@ -15,7 +15,7 @@ export function useResponsiveViewbox() {
       const width = entry.contentRect.width;
 
       if (width < 758) {
-        setViewbox("0 0 1320 570");
+        setViewbox("0 0 1320 550");
       } else if (width < 1024) {
         setViewbox("0 0 1320 480");
       } else {

@@ -44,7 +44,7 @@ a {
   -webkit-background-clip: text;
   /* color: transparent; */
   /* color: white; */
-  color: #c9bbf9;
+  color: #c7baf2;
   /* To prevent inherited styles from leaking in */
   isolation: isolate;
 
@@ -55,11 +55,18 @@ a {
 }
 
 @theme {
-  --breakpoint-xs: 30rem;
+  --breakpoint-xs: 26rem;
   --breakpoint-sm: 40rem;
   --breakpoint-md: 48rem;
   --breakpoint-lg: 64rem;
   --breakpoint-xl: 90rem;
+
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-md: 16px;
+  --text-lg: 18px;
+  --text-xl: 20px;
+  --text-2xl: 22px;
 }
 
 @layer base {
@@ -70,19 +77,16 @@ a {
 }
 
 @layer utilities {
-  .custom-container {
-    /* @apply m-6 md:mx-auto; */
-    @apply m-6;
+  /* ASCII Animation */
+  .animate-slow-pulse {
+    animation: pulse 3.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
 
+  /* Fonts */
   .monoton {
     @apply tracking-wider;
     font-family: "Monoton", sans-serif;
     font-weight: 400;
-  }
-
-  .animate-slow-pulse {
-    animation: pulse 3.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
 
   .nunito-light {
@@ -107,5 +111,22 @@ a {
     font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
+  }
+
+  .hero-text {
+    @apply absolute top-[25%] left-2 sm:left-4 sm:top-[33%] lg:text-center lg:inset-0 lg:flex lg:flex-col lg:items-center lg:justify-center;
+  }
+
+  .hero-divy {
+    @apply text-2xl xs:text-3xl md:text-[2rem] lg:text-[4rem];
+  }
+
+  .hero-sub {
+    @apply text-xs xs:text-sm md:text-xl lg:text-[1.5rem] xl:text-[2.2rem] max-sm:max-w-[40ch] max-lg:max-w-[37ch] lg:max-w-[50ch];
+  }
+
+  .custom-container {
+    /* @apply m-6 md:mx-auto; */
+    @apply m-6;
   }
 }
