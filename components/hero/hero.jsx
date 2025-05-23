@@ -38,7 +38,8 @@ export const Hero = () => {
             ref={textRef}
             className="bg-transparent text-sm text-inherit font-mono font-normal inline-block whitespace-nowrap"
           >
-            <span className="select-none">$</span> npm i divy-ui
+            <span className="select-none">$</span>
+            npm i divy-ui
           </pre>
           <button
             type="button"

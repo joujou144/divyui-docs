@@ -5,6 +5,7 @@ export const DivyArtASCIISVG = ({ viewBox, ref }) => (
     ref={ref}
     width="100%"
     viewBox={viewBox}
+    role="presentation"
     xmlns="http://www.w3.org/2000/svg"
     preserveAspectRatio="xMinYMin meet"
   >
