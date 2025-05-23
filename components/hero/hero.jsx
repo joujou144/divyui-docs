@@ -1,24 +1,28 @@
 "use client";
 
-import { DivyArtASCIISVG } from "@/components/svg/divy-ascii-art";
-import { useResponsiveViewbox } from "@/utils";
+import { CheckIcon, CopyIcon, DivyArtASCIISVG } from "@/components/svg";
+import { copyToClipboard, useResponsiveViewbox } from "@/utils";
+import { useRef, useState } from "react";
 
 export const Hero = () => {
+  const textRef = useRef(null);
+  const timeoutRef = useRef(null);
+  const [copyText, setCopyText] = useState(false);
   const { elRef, viewBox } = useResponsiveViewbox();
 
+  const handleCopyToClipboard = async () => {
+    const success = await copyToClipboard(textRef);
+
+    if (success) {
+      setCopyText(true);
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = setTimeout(() => {
+        setCopyText(false);
+      }, 1500);
+    }
+  };
+
   return (
-    // <section className="md:mx-auto flex flex-col sm:items-center sm:justify-center lg:flex-row">
-    //   <DivyArtASCIISVG />
-
-    //   <div className="mx-3 text-right lg:text-left text-white ">
-    //     <h1 className="monoton-logo text-[2.5rem] md:text-[4.5rem]">Divy UI</h1>
-
-    //     <p className="font-semibold leading-6 md:text-xl mt-2">
-    //       Minimalist UI components to elevate your frontend workflow for
-    //       building accessible web applications.
-    //     </p>
-    //   </div>
-    // </section>
     <section className="relative">
       <DivyArtASCIISVG ref={elRef} viewBox={viewBox} />
       <div className="hero-text text-violet-50">
@@ -28,6 +32,24 @@ export const Hero = () => {
           Minimalist UI components to elevate your frontend workflow for
           building accessible web applications.
         </p>
+
+        <div className="invisible lg:visible w-auto flex justify-between gap-4 items-center bg-berry-400/60 text-white px-3 py-1.5 rounded-full">
+          <pre
+            ref={textRef}
+            className="bg-transparent text-sm text-inherit font-mono font-normal inline-block whitespace-nowrap"
+          >
+            <span className="select-none">$</span> npm i divy-ui
+          </pre>
+          <button
+            type="button"
+            tabIndex={0}
+            aria-label="Copy to clipboard"
+            onClick={handleCopyToClipboard}
+            className="cursor-pointer"
+          >
+            {copyText ? <CheckIcon /> : <CopyIcon />}
+          </button>
+        </div>
       </div>
     </section>
   );

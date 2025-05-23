@@ -2,6 +2,37 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 @import "tailwindcss";
 
+@theme {
+  --breakpoint-xs: 26rem;
+  --breakpoint-sm: 40rem;
+  --breakpoint-md: 48rem;
+  --breakpoint-lg: 64rem;
+  --breakpoint-xl: 90rem;
+
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-md: 16px;
+  --text-lg: 18px;
+  --text-xl: 20px;
+  --text-2xl: 22px;
+
+  /* Background gradient */
+
+  --color-lilac-400: #8989be;
+  --color-lilac-300: #8686c7;
+  --color-lilac-200: #9595d6;
+  --color-lilac-100: #d3d2f6;
+  --color-lilac-50: #fbfaff;
+
+  /* ASCII Art */
+  --color-opaque-berry-200: #b5a9e2c5;
+  --color-opaque-berry-100: #d7cef9e2;
+  --color-berry-200: #aca3de;
+  --color-berry-100: #cabff1;
+
+  --color-berry-400: #7c7cd4;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -16,11 +47,11 @@ body {
 body {
   background: linear-gradient(
     to bottom,
-    #8989be,
-    #8686c7,
-    /* #a1a1e1, */ /* #aeaee3, */ #9595d6,
-    #d3d2f6,
-    #fbfaff
+    var(--color-lilac-400),
+    var(--color-lilac-300),
+    var(--color-lilac-200),
+    var(--color-lilac-100),
+    var(--color-lilac-50)
   );
   height: 100%;
   display: flex;
@@ -39,12 +70,17 @@ a {
   overflow-x: auto;
   font-family: monospace;
   white-space: pre;
-  /* background-image: linear-gradient(to bottom, white, #d7cef9, white, #e6dfff); */
+  background-image: linear-gradient(
+    to bottom,
+    var(--color-berry-200),
+    var(--color-opaque-berry-100),
+    var(--color-berry-100),
+    var(--color-opaque-berry-200)
+  );
   background-clip: text;
   -webkit-background-clip: text;
-  /* color: transparent; */
-  /* color: white; */
-  color: #c7baf2;
+  color: transparent;
+
   /* To prevent inherited styles from leaking in */
   isolation: isolate;
 
@@ -52,21 +88,6 @@ a {
   font-weight: 600;
   font-size: 0.8rem;
   line-height: 1.5;
-}
-
-@theme {
-  --breakpoint-xs: 26rem;
-  --breakpoint-sm: 40rem;
-  --breakpoint-md: 48rem;
-  --breakpoint-lg: 64rem;
-  --breakpoint-xl: 90rem;
-
-  --text-xs: 12px;
-  --text-sm: 14px;
-  --text-md: 16px;
-  --text-lg: 18px;
-  --text-xl: 20px;
-  --text-2xl: 22px;
 }
 
 @layer base {
@@ -79,7 +100,7 @@ a {
 @layer utilities {
   /* ASCII Animation */
   .animate-slow-pulse {
-    animation: pulse 3.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
 
   /* Fonts */
@@ -113,8 +134,9 @@ a {
     font-style: normal;
   }
 
+  /* Hero */
   .hero-text {
-    @apply absolute top-[25%] left-2 sm:left-4 sm:top-[33%] lg:text-center lg:inset-0 lg:flex lg:flex-col lg:items-center lg:justify-center;
+    @apply absolute top-[25%] left-2 sm:left-4 sm:top-[33%] gap-2 lg:gap-4 lg:text-center lg:inset-0 lg:flex lg:flex-col lg:items-center lg:justify-center;
   }
 
   .hero-divy {
@@ -122,11 +144,6 @@ a {
   }
 
   .hero-sub {
-    @apply text-xs xs:text-sm md:text-xl lg:text-[1.5rem] xl:text-[2.2rem] max-sm:max-w-[40ch] max-lg:max-w-[37ch] lg:max-w-[50ch];
-  }
-
-  .custom-container {
-    /* @apply m-6 md:mx-auto; */
-    @apply m-6;
+    @apply text-xs xs:text-sm md:text-xl lg:text-3xl xl:text-[2.2rem] 2xl:text-[2.5rem] max-sm:max-w-[40ch] max-lg:max-w-[37ch] lg:max-w-[50ch];
   }
 }
