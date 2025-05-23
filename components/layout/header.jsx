@@ -18,7 +18,7 @@ export const Header = () => {
 
         {/* Right nav */}
         <div className="hidden lg:flex gap-6 nunito-regular">
-          <p>Components</p>
+          <Link href="/components">Components</Link>
           <p>Docs</p>
           <p>Installation</p>
         </div>
