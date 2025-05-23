@@ -146,4 +146,12 @@ a {
   .hero-sub {
     @apply text-xs xs:text-sm md:text-xl lg:text-3xl xl:text-[2.2rem] 2xl:text-[2.5rem] max-sm:max-w-[40ch] max-lg:max-w-[37ch] lg:max-w-[50ch];
   }
+
+  .copy-cta {
+    @apply invisible lg:visible w-auto text-sm font-mono font-normal flex justify-between gap-2 items-center bg-berry-400/60 text-white px-3 py-1.5 rounded-full;
+  }
+
+  .copy-text {
+    @apply bg-transparent text-inherit inline-block whitespace-nowrap mr-2;
+  }
 }

@@ -33,12 +33,11 @@ export const Hero = () => {
           building accessible web applications.
         </p>
 
-        <div className="invisible lg:visible w-auto flex justify-between gap-4 items-center bg-berry-400/60 text-white px-3 py-1.5 rounded-full">
-          <pre
-            ref={textRef}
-            className="bg-transparent text-sm text-inherit font-mono font-normal inline-block whitespace-nowrap"
-          >
-            <span className="select-none">$</span>
+        <div className="copy-cta">
+          <span className="select-none" aria-hidden="true">
+            $
+          </span>
+          <pre ref={textRef} className="copy-text">
             npm i divy-ui
           </pre>
           <button
