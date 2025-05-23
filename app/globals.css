@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 @import "tailwindcss";
 
 * {
@@ -16,10 +17,10 @@ body {
   background: linear-gradient(
     to bottom,
     #8989be,
-    #a1a1e1,
-    #aeaee3,
-    #dfdfde,
-    #f7f5f2
+    #8686c7,
+    /* #a1a1e1, */ /* #aeaee3, */ #9595d6,
+    #d3d2f6,
+    #fbfaff
   );
   height: 100%;
   display: flex;
@@ -38,18 +39,27 @@ a {
   overflow-x: auto;
   font-family: monospace;
   white-space: pre;
-  background-image: linear-gradient(to bottom, white, #d7cef9, white, #e6dfff);
+  /* background-image: linear-gradient(to bottom, white, #d7cef9, white, #e6dfff); */
   background-clip: text;
   -webkit-background-clip: text;
-  color: transparent;
-
+  /* color: transparent; */
+  /* color: white; */
+  color: #c9bbf9;
   /* To prevent inherited styles from leaking in */
   isolation: isolate;
 
   /* Optional resets to guarantee stable rendering */
-  font-weight: 400;
+  font-weight: 600;
   font-size: 0.8rem;
   line-height: 1.5;
+}
+
+@theme {
+  --breakpoint-xs: 30rem;
+  --breakpoint-sm: 40rem;
+  --breakpoint-md: 48rem;
+  --breakpoint-lg: 64rem;
+  --breakpoint-xl: 90rem;
 }
 
 @layer base {
@@ -61,12 +71,41 @@ a {
 
 @layer utilities {
   .custom-container {
-    @apply m-6 md:mx-auto;
+    /* @apply m-6 md:mx-auto; */
+    @apply m-6;
   }
 
-  .monoton-logo {
+  .monoton {
     @apply tracking-wider;
     font-family: "Monoton", sans-serif;
     font-weight: 400;
+  }
+
+  .animate-slow-pulse {
+    animation: pulse 3.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .nunito-light {
+    @apply tracking-wider;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+  }
+
+  .nunito-regular {
+    @apply tracking-wider;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .nunito-semibold {
+    @apply tracking-wider;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
   }
 }

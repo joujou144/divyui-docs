@@ -6,15 +6,15 @@ export const Header = () => {
       <div className="flex justify-between items-center py-2 mx-6">
         {/* Left nav */}
         <div>
-          <Link href="/" className="monoton-logo text-lg">
+          <Link href="/" className="monoton text-sm lg:text-lg">
             Divy UI
           </Link>
           {/* <Link>Components</Link> */}
-          <span className="ml-6">v.3.0</span>
+          <span className="ml-6 nunito-light text-sm">v.3.0</span>
         </div>
 
         {/* Right nav */}
-        <div className="hidden lg:flex gap-6">
+        <div className="hidden lg:flex gap-6 nunito-regular">
           <p>Components</p>
           <p>Docs</p>
           <p>Installation</p>
