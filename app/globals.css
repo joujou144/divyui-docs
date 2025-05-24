@@ -134,6 +134,16 @@ a {
     font-style: normal;
   }
 
+  /* Layout */
+  .components-container {
+    background: linear-gradient(
+      to bottom,
+      var(--color-lilac-100),
+      var(--color-lilac-50)
+    );
+    height: 100%;
+  }
+
   /* Hero */
   .hero-text {
     @apply absolute top-[25%] left-2 sm:left-4 sm:top-[33%] gap-2 lg:gap-4 lg:text-center lg:inset-0 lg:flex lg:flex-col lg:items-center lg:justify-center;

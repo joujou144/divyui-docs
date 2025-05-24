@@ -1,3 +1,3 @@
 export default function Components() {
-  return <>Components page</>;
+  return <div className="components-container p-6">Components page</div>;
 }

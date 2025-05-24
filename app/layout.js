@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className="min-h-screen">
         <Header />
-        <main className="m-6 nunito-regular">{children}</main>
+        <main className="nunito-regular">{children}</main>
         <Footer />
       </body>
     </html>
