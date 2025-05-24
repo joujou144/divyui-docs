@@ -1,4 +1,4 @@
-import MultiGeo from "@/components/ascii/shapes";
+import MultiGeo from "@/components/hero/ascii/shapes";
 
 export const DivyArtASCIISVG = ({ viewBox, ref }) => (
   <svg
