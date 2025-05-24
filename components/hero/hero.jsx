@@ -1,10 +1,10 @@
 "use client";
 
 import { CheckIcon, CopyIcon, DivyArtASCIISVG } from "@/components/svg";
-import { copyToClipboard, useResponsiveViewbox } from "@/utils";
+import { cn, copyToClipboard, useResponsiveViewbox } from "@/utils";
 import { useRef, useState } from "react";
 
-export const Hero = () => {
+export const Hero = ({ className }) => {
   const textRef = useRef(null);
   const timeoutRef = useRef(null);
   const [copyText, setCopyText] = useState(false);
@@ -23,7 +23,7 @@ export const Hero = () => {
   };
 
   return (
-    <section className="relative">
+    <section className={cn("relative", className)}>
       <DivyArtASCIISVG ref={elRef} viewBox={viewBox} />
       <div className="hero-text text-violet-50">
         <h1 className="monoton hero-divy">Divy UI</h1>
