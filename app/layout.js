@@ -15,9 +15,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="min-h-screen">
+      <body>
         <Header />
-        <main className="nunito-regular">{children}</main>
+        <main className="m-6 nunito-regular">{children}</main>
         <Footer />
       </body>
     </html>

@@ -1,2 +1,2 @@
-export * from "./ascii";
+export * from "./ascii/shapes";
 export * from "./hero";
