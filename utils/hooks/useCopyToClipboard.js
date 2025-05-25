@@ -34,7 +34,9 @@ export function useCopyToClipboard(timeout = 1500) {
           .catch((err) => setError(err));
       } else {
         setError(
-          new Error("useClipboard: navigator.clipboard API not supported")
+          new Error(
+            "useCopyToClipboard: navigator.clipboard API is not supported."
+          )
         );
       }
     },
@@ -50,7 +52,7 @@ export function useCopyToClipboard(timeout = 1500) {
   return {
     handleCopy,
     copied,
-    reset,
     error,
+    reset,
   };
 }
