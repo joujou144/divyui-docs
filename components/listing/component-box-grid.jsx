@@ -11,13 +11,9 @@ export const ComponentBoxGrid = ({
 
   if (featured >= 0) list = list.slice(0, featured);
   return (
-    <div className="grid grid-cols-2 gap-4 md:grid-cols-4 xl:grid-cols-6">
+    <div className="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-6">
       {list.map((item) => (
-        <Link
-          key={item.id}
-          href={item.name}
-          className="relative transition-all flex flex-col px-5 py-6 capitalize text-2xl shadow-md shadow-black/50 rounded-lg hover:shadow-xl hover:shadow-black/50"
-        >
+        <Link key={item.id} href={item.name} className="component-list-box">
           <p className="text-slate-600">{item.name}</p>
           icon
         </Link>

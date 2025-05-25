@@ -124,6 +124,14 @@ a {
     @apply md:text-[2rem] lg:text-3xl xl:text-[2.2rem] 2xl:text-[2.5rem] max-sm:max-w-[40ch] max-lg:max-w-[37ch] lg:max-w-[50ch];
   }
 
+  .component-title {
+    @apply text-slate-700 text-[1.5rem] leading-8;
+  }
+
+  .component-subtitle {
+    @apply mt-2 text-sm lg:text-md text-slate-600;
+  }
+
   /* Layout */
   .body-background {
     @apply min-h-screen flex flex-col bg-gradient-to-b from-[var(--color-lilac-400)] via-[var(--color-lilac-200)] to-[var(--color-lilac-50)];
@@ -153,5 +161,10 @@ a {
 
   .copy-text {
     @apply bg-transparent text-sm font-mono font-normal text-inherit inline-block whitespace-nowrap mr-2;
+  }
+
+  /* Component Listing */
+  .component-list-box {
+    @apply bg-violet-100 relative transition-all flex flex-col px-5 py-6 capitalize text-2xl shadow-md shadow-berry-400/70 rounded-lg hover:shadow-xl hover:shadow-berry-200;
   }
 }
