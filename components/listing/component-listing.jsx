@@ -1,31 +1,21 @@
-import { cn, components } from "@/utils";
-import Link from "next/link";
+import { cn } from "@/utils";
+import { ComponentBoxGrid } from "./component-box-grid";
 
-export const ComponentListing = ({
-  featured = 0,
-  showFeaturedOnly = false,
-  className,
-}) => {
-  let list = showFeaturedOnly
-    ? components.filter((c) => c.featured)
-    : components;
-
-  if (featured >= 0) list = list.slice(0, featured);
-
+export const ComponentListing = ({ className }) => {
   return (
-    <section className={cn("", className)}>
-      <div className="grid grid-cols-2 gap-4 md:grid-cols-4 xl:grid-cols-6">
-        {list.map((item) => (
-          <Link
-            key={item.id}
-            href={item.name}
-            className="relative transition-all flex flex-col px-5 py-6 capitalize text-2xl shadow-md shadow-black/50 rounded-lg hover:shadow-xl hover:shadow-black/50"
-          >
-            <p className="text-slate-600">{item.name}</p>
-            icon
-          </Link>
-        ))}
+    <section className={cn("flex flex-col gap-6", className)}>
+      <div>
+        <h2 className="nunito-semibold text-slate-700 text-heading text-[1.5rem] leading-8">
+          Clean design for <span className="text-white">beautiful</span>{" "}
+          interfaces
+        </h2>
+        <p className="mt-2 text-sm lg:text-md text-slate-600">
+          DivyUI uses Tailwind variants to simplify slot customization and
+          prevent Tailwind class conflicts.
+        </p>
       </div>
+
+      <ComponentBoxGrid featured={6} showFeaturedOnly />
     </section>
   );
 };

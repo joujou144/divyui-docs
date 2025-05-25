@@ -15,7 +15,7 @@ export const Hero = ({ className }) => {
       <div className="hero-text text-violet-50">
         <h1 className="monoton hero-divy">Divy UI</h1>
 
-        <p className="nunito-semibold hero-sub">
+        <p className="nunito-semibold text-heading text-sm xs:text-xl">
           Minimalist UI components to elevate your frontend workflow for
           building accessible web applications.
         </p>

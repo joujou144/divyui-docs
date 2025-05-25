@@ -120,6 +120,10 @@ a {
     font-style: normal;
   }
 
+  .text-heading {
+    @apply md:text-[2rem] lg:text-3xl xl:text-[2.2rem] 2xl:text-[2.5rem] max-sm:max-w-[40ch] max-lg:max-w-[37ch] lg:max-w-[50ch];
+  }
+
   /* Layout */
   .body-background {
     @apply min-h-screen flex flex-col bg-gradient-to-b from-[var(--color-lilac-400)] via-[var(--color-lilac-200)] to-[var(--color-lilac-50)];
@@ -136,15 +140,11 @@ a {
 
   /* Hero */
   .hero-text {
-    @apply absolute top-[25%] left-2 sm:left-4 sm:top-[33%] gap-2 lg:gap-4 lg:text-center lg:inset-0 lg:flex lg:flex-col lg:items-center lg:justify-center;
+    @apply absolute top-1 xs:top-[18%] sm:top-[20%] md:top-[25%] left-2 gap-2 lg:gap-4 lg:text-center lg:inset-0 lg:flex lg:flex-col lg:items-center lg:justify-center;
   }
 
   .hero-divy {
     @apply text-2xl xs:text-3xl md:text-[2rem] lg:text-[4rem];
-  }
-
-  .hero-sub {
-    @apply text-xs xs:text-sm md:text-xl lg:text-3xl xl:text-[2.2rem] 2xl:text-[2.5rem] max-sm:max-w-[40ch] max-lg:max-w-[37ch] lg:max-w-[50ch];
   }
 
   .copy-cta {
