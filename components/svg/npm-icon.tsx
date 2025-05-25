@@ -10,7 +10,7 @@ export const NpmIcon = ({ ...props }) => (
   >
     <path
       fill="currentColor"
-      d="M22 2V1H2v1H1v20h1v1h20v-1h1V2zM12 8v11H5V5h14v14h-3V8z"
+      d="M18 3H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h7V11h4v10h1a3 3 0 0 0 3-3V6a3 3 0 0 0-3-3"
     />
   </svg>
 );
