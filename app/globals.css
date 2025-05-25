@@ -45,15 +45,7 @@ body {
 }
 
 body {
-  background: linear-gradient(
-    to bottom,
-    var(--color-lilac-400),
-    var(--color-lilac-300),
-    var(--color-lilac-200),
-    var(--color-lilac-100),
-    var(--color-lilac-50)
-  );
-  height: 100%;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -135,6 +127,10 @@ a {
   }
 
   /* Layout */
+  .body-background {
+    @apply bg-gradient-to-b from-[var(--color-lilac-400)] via-[var(--color-lilac-200)] to-[var(--color-lilac-50)];
+  }
+
   .components-container {
     background: linear-gradient(
       to bottom,
