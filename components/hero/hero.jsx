@@ -1,26 +1,13 @@
 "use client";
 
 import { CheckIcon, CopyIcon, DivyArtASCIISVG } from "@/components/svg";
-import { cn, copyToClipboard, useResponsiveViewbox } from "@/utils";
-import { useRef, useState } from "react";
+import { cn, useCopyToClipboard, useResponsiveViewbox } from "@/utils";
+import { useRef } from "react";
 
 export const Hero = ({ className }) => {
   const textRef = useRef(null);
-  const timeoutRef = useRef(null);
-  const [copyText, setCopyText] = useState(false);
   const { elRef, viewBox } = useResponsiveViewbox();
-
-  const handleCopyToClipboard = async () => {
-    const success = await copyToClipboard(textRef);
-
-    if (success) {
-      setCopyText(true);
-      clearTimeout(timeoutRef.current);
-      timeoutRef.current = setTimeout(() => {
-        setCopyText(false);
-      }, 1500);
-    }
-  };
+  const { handleCopy, copied } = useCopyToClipboard();
 
   return (
     <section className={cn("relative", className)}>
@@ -34,20 +21,20 @@ export const Hero = ({ className }) => {
         </p>
 
         <div className="copy-cta">
-          <span className="select-none" aria-hidden="true">
-            $
-          </span>
-          <pre ref={textRef} className="copy-text">
+          <pre ref={textRef} className="copy-text" data-copy="npm i divy-ui">
+            <span className="select-none" aria-hidden="true">
+              $
+            </span>
             npm i divy-ui
           </pre>
           <button
             type="button"
             tabIndex={0}
             aria-label="Copy to clipboard"
-            onClick={handleCopyToClipboard}
+            onClick={() => handleCopy(textRef.current.dataset.copy)}
             className="cursor-pointer"
           >
-            {copyText ? <CheckIcon /> : <CopyIcon />}
+            {copied ? <CheckIcon /> : <CopyIcon />}
           </button>
         </div>
       </div>
