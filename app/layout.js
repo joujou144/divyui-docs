@@ -15,10 +15,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="body-background">
-        <Header />
-        <main className="m-6 nunito-regular">{children}</main>
-        <Footer />
+      <body className="min-h-screen">
+        <div className="body-background">
+          <Header />
+          <main className="flex-1 m-6 nunito-regular">{children}</main>
+          <Footer />
+        </div>
       </body>
     </html>
   );

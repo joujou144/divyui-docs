@@ -44,12 +44,6 @@ body {
   height: 100%;
 }
 
-body {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
 a {
   color: inherit;
   text-decoration: none;
@@ -128,7 +122,7 @@ a {
 
   /* Layout */
   .body-background {
-    @apply bg-gradient-to-b from-[var(--color-lilac-400)] via-[var(--color-lilac-200)] to-[var(--color-lilac-50)];
+    @apply min-h-screen flex flex-col bg-gradient-to-b from-[var(--color-lilac-400)] via-[var(--color-lilac-200)] to-[var(--color-lilac-50)];
   }
 
   .components-container {
