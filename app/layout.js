@@ -1,5 +1,5 @@
-import { Footer } from "@/components/layout/footer";
-import { Header } from "@/components/layout/header";
+import { Footer, Header, PageWrapper } from "@/components/layout";
+
 import "./globals.css";
 
 export const metadata = {
@@ -16,11 +16,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="min-h-screen">
-        <div className="body-background">
+        <PageWrapper>
           <Header />
           <main className="flex-1 m-6 nunito-regular">{children}</main>
           <Footer />
-        </div>
+        </PageWrapper>
       </body>
     </html>
   );

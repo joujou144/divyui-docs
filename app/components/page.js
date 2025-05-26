@@ -1,6 +1,6 @@
-export default function Components() {
+export default function ComponentsPage() {
   return (
-    <div className="components-container">
+    <div>
       Components page
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod

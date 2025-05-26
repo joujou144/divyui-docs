@@ -1,5 +1,11 @@
 import { GithubIcon, LinkedinIcon, NpmIcon } from "@/components/svg";
 
+export const navMenu = [
+  { id: 1, name: "components", href: "/components" },
+  { id: 2, name: "docs", href: "/docs" },
+  { id: 3, name: "installation", href: "/installation" },
+];
+
 export const components = [
   { id: 1, name: "button", icon: "", featured: true },
   { id: 2, name: "card", icon: "", featured: true },
@@ -21,7 +27,7 @@ export const footerLinks = [
     title: "github",
     link: "https://github.com/joujou144/divy-ui",
     icon: (
-      <GithubIcon className="text-lilac-300 transition-colors hover:text-berry-400 duration-200" />
+      <GithubIcon className="text-indigo-950 transition-colors hover:text-berry-400 duration-200" />
     ),
   },
   {
@@ -29,7 +35,7 @@ export const footerLinks = [
     title: "linkedin",
     link: "https://www.linkedin.com/in/aznimrahman",
     icon: (
-      <LinkedinIcon className="text-lilac-300 transition-colors hover:text-berry-400 duration-200" />
+      <LinkedinIcon className="text-indigo-950 transition-colors hover:text-berry-400 duration-200" />
     ),
   },
   {
@@ -37,7 +43,7 @@ export const footerLinks = [
     title: "npm",
     link: "https://www.npmjs.com/package/divy-ui",
     icon: (
-      <NpmIcon className="text-lilac-300 transition-colors hover:text-berry-400 duration-200" />
+      <NpmIcon className="text-indigo-950 transition-colors hover:text-berry-400 duration-200" />
     ),
   },
 ];
