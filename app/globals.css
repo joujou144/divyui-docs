@@ -120,19 +120,19 @@ a {
     font-style: normal;
   }
 
-  .text-heading {
-    @apply md:text-[2rem] lg:text-3xl xl:text-[2.2rem] 2xl:text-[2.5rem] max-sm:max-w-[40ch] max-lg:max-w-[37ch] lg:max-w-[50ch];
+  /*  Nav Menu */
+  .navbar-text {
+    @apply w-full py-4 border-b;
   }
 
-  .component-title {
-    @apply text-slate-700 text-[1.5rem] leading-8;
+  .navbar-text.home {
+    @apply text-violet-50 border-violet-200;
   }
 
-  .component-subtitle {
-    @apply mt-2 text-sm lg:text-md text-slate-600;
+  .navbar-text.other-pages {
+    @apply text-indigo-950 border-slate-300;
   }
 
-  /*  Nav Menu Transition Link*/
   .transition-link {
     transition: all 0.3s ease;
     position: relative;
@@ -154,6 +154,18 @@ a {
 
   .transition-link.active::after {
     transform: translateX(-50%) scale(1);
+  }
+
+  .text-heading {
+    @apply md:text-[2rem] lg:text-3xl xl:text-[2.2rem] 2xl:text-[2.5rem] max-sm:max-w-[40ch] max-lg:max-w-[37ch] lg:max-w-[50ch];
+  }
+
+  .component-title {
+    @apply text-slate-700 text-[1.5rem] leading-8;
+  }
+
+  .component-subtitle {
+    @apply mt-2 text-sm lg:text-md text-slate-600;
   }
 
   /* Layout */

@@ -1,25 +1,22 @@
 "use client";
 
-import { cn, navMenu } from "@/utils";
+import { cn, navMenu, useThemeColourChange } from "@/utils";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useState } from "react";
 import { TransitionLink } from "../nav";
+import { CloseIcon, MenuIcon } from "../svg";
 
 export const Header = () => {
-  const pathname = usePathname();
-  const isHome = pathname === "/";
+  const textColor = useThemeColourChange();
+  const [openMenu, setOpenMenu] = useState(false);
+
+  const handleOpenMenu = () => setOpenMenu(!openMenu);
+
   return (
-    <nav
-      role="navigation"
-      className={cn(
-        "w-full py-4 border-b",
-        isHome ? "text-violet-50" : "text-indigo-950",
-        isHome ? "border-violet-200" : "border-slate-300"
-      )}
-    >
+    <nav role="navigation" className={cn("navbar-text", textColor)}>
       <div className="flex justify-between items-center py-2 mx-6">
         {/* Home */}
-        <div className>
+        <div>
           <Link href="/" className="monoton text-xl">
             Divy
           </Link>
@@ -37,7 +34,9 @@ export const Header = () => {
         </ul>
 
         {/* Mobile nav */}
-        <div className="lg:hidden">nav</div>
+        <button className="lg:hidden cursor-pointer" onClick={handleOpenMenu}>
+          {openMenu ? <CloseIcon /> : <MenuIcon />}
+        </button>
       </div>
     </nav>
   );
