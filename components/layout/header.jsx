@@ -16,12 +16,14 @@ export const Header = () => {
     <nav role="navigation" className={cn("navbar-text", textColor)}>
       <div className="flex justify-between items-center py-2 mx-6">
         {/* Home */}
-        <div>
-          <Link href="/" className="monoton text-xl">
+        <div className="flex items-center gap-4">
+          <Link href="/" className="monoton text-xl font-extrabold">
             Divy
           </Link>
 
-          <span className="ml-4 nunito-light text-sm">v.3.0</span>
+          <span className={cn("nunito-light version-pill", textColor)}>
+            v.3.0
+          </span>
         </div>
 
         {/* Menu */}

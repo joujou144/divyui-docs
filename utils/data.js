@@ -2,8 +2,8 @@ import { GithubIcon, LinkedinIcon, NpmIcon } from "@/components/svg";
 
 export const navMenu = [
   { id: 1, name: "components", href: "/components" },
-  { id: 2, name: "docs", href: "/docs" },
-  { id: 3, name: "installation", href: "/installation" },
+  { id: 2, name: "installation", href: "/installation" },
+  { id: 3, name: "docs", href: "/docs" },
 ];
 
 export const components = [
