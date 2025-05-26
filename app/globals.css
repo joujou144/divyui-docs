@@ -8,6 +8,7 @@
   --breakpoint-md: 48rem;
   --breakpoint-lg: 64rem;
   --breakpoint-xl: 90rem;
+  --breakpoint-2xl: 102rem;
 
   --text-xs: 12px;
   --text-sm: 14px;
@@ -84,6 +85,11 @@ a {
 }
 
 @layer utilities {
+  /* Container */
+  .custom-container {
+    @apply flex-1 p-6 max-w-[1440px] w-full mx-auto;
+  }
+
   /* ASCII Animation */
   .animate-slow-pulse {
     animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
@@ -179,7 +185,7 @@ a {
 
   /* Hero */
   .hero-text {
-    @apply absolute top-1 xs:top-[18%] sm:top-[20%] md:top-[25%] left-2 gap-2 lg:gap-4 lg:text-center lg:inset-0 lg:flex lg:flex-col lg:items-center lg:justify-center;
+    @apply absolute top-1 xs:top-[18%] sm:top-[20%] md:top-[25%] left-2 sm:left-3 md:left-4 gap-2 lg:gap-4 lg:text-center lg:inset-0 lg:flex lg:flex-col lg:items-center lg:justify-center;
   }
 
   .hero-divy {
