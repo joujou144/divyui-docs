@@ -26,24 +26,18 @@ export const footerLinks = [
     id: 1,
     title: "github",
     link: "https://github.com/joujou144/divy-ui",
-    icon: (
-      <GithubIcon className="text-indigo-950 transition-colors hover:text-berry-400 duration-200" />
-    ),
+    icon: <GithubIcon />,
   },
   {
     id: 2,
     title: "linkedin",
     link: "https://www.linkedin.com/in/aznimrahman",
-    icon: (
-      <LinkedinIcon className="text-indigo-950 transition-colors hover:text-berry-400 duration-200" />
-    ),
+    icon: <LinkedinIcon />,
   },
   {
     id: 3,
     title: "npm",
     link: "https://www.npmjs.com/package/divy-ui",
-    icon: (
-      <NpmIcon className="text-indigo-950 transition-colors hover:text-berry-400 duration-200" />
-    ),
+    icon: <NpmIcon />,
   },
 ];

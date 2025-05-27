@@ -13,7 +13,11 @@ export const ComponentBoxGrid = ({
   return (
     <div className="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-6">
       {list.map((item) => (
-        <Link key={item.id} href={item.name} className="component-list-box">
+        <Link
+          key={item.id}
+          href={`/components/${item.name}`}
+          className="component-list-box"
+        >
           <p className="text-slate-600">{item.name}</p>
           icon
         </Link>

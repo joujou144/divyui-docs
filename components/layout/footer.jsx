@@ -9,7 +9,12 @@ export const Footer = () => {
       <ul className="hidden lg:flex items-center gap-6">
         {footerLinks.map((item) => (
           <li key={item.id}>
-            <a rel="noreferrer noopener" target="_blank" href={item.link}>
+            <a
+              rel="noreferrer noopener"
+              target="_blank"
+              href={item.link}
+              className="text-indigo-950 transition-colors hover:text-berry-400 duration-200"
+            >
               {item.icon}
             </a>
           </li>
