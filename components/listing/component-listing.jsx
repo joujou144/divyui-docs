@@ -6,8 +6,7 @@ export const ComponentListing = ({ className }) => {
     <section className={cn("flex flex-col gap-6 md:px-4", className)}>
       <div className="flex flex-col items-start">
         <h2 className="nunito-semibold text-heading component-title">
-          Clean design for <span className="text-white">beautiful</span>{" "}
-          interfaces
+          Clean design for beautiful interfaces
         </h2>
         <p className="component-subtitle">
           DivyUI uses Tailwind variants to simplify slot customization and
