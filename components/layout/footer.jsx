@@ -2,7 +2,7 @@ import { footerLinks } from "@/utils";
 
 export const Footer = () => {
   return (
-    <footer className="mt-auto w-full flex flex-col items-center justify-center gap-3 p-5 border-t border-slate-300">
+    <footer className="mt-auto w-full flex flex-col items-center justify-center gap-3 p-5 border-t border-lilac-100">
       <p className="text-sm text-indigo-950">
         © 2025 DivyUI Inc. All rights reserved.
       </p>

@@ -132,15 +132,7 @@ a {
 
   /*  Nav Menu */
   nav {
-    @apply w-full py-4 border-b;
-  }
-
-  nav.home {
-    @apply border-violet-200;
-  }
-
-  nav.other-pages {
-    @apply border-slate-300;
+    @apply w-full py-4 border-b border-lilac-100;
   }
 
   nav .nav-logo.home,
