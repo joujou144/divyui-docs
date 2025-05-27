@@ -1,18 +1,19 @@
-import { navMenu, useNavMenu } from "@/utils";
+import { cn, navMenu, useNavMenu, useThemeColorChange } from "@/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { CloseIcon, MenuIcon } from "../svg";
 
 export const MobileNav = () => {
+  const { pageClass } = useThemeColorChange();
   const { openMenu, setOpenMenu, handleOpenMenu } = useNavMenu();
 
   return (
     <>
       <button
-        className="lg:hidden cursor-pointer z-50"
+        className={cn("lg:hidden nav-button", pageClass)}
         onClick={handleOpenMenu}
       >
-        {openMenu ? <CloseIcon className="text-violet-50" /> : <MenuIcon />}
+        {openMenu ? <CloseIcon /> : <MenuIcon />}
       </button>
 
       {/** Mobile Nav Overlay */}
