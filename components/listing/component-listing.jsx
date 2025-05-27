@@ -12,7 +12,7 @@ export const ComponentListing = ({ className }) => {
           DivyUI uses Tailwind variants to simplify slot customization and
           prevent Tailwind class conflicts.
         </p>
-        <p className="px-3 py-1 mt-4 bg-berry-400/70 text-violet-50 rounded-full animate-slow-bounce text-sm lg:text-md">
+        <p className="px-3 py-1 mt-4 bg-berry-400/70 text-violet-50 rounded-full animate-slow-bounce text-xs xs:text-sm lg:text-md">
           Featured components added weekly
         </p>
       </div>

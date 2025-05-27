@@ -1,13 +1,13 @@
 "use client";
 
-import { useThemeColourChange } from "@/utils/hooks";
+import { useThemeColorChange } from "@/utils/hooks";
 
 export const PageWrapper = ({ children }) => {
-  const backgroundClass = useThemeColourChange();
+  const { pageClass } = useThemeColorChange();
 
   return (
     <div
-      className={`body-background ${backgroundClass} transition-colors duration-300`}
+      className={`body-background ${pageClass} transition-colors duration-300`}
     >
       {children}
     </div>

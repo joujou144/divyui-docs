@@ -1,2 +1,2 @@
 export * from "./mobile-nav";
-export * from "./transition-link";
+export * from "./nav-links";
