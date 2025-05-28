@@ -1,9 +1,9 @@
 import { GithubIcon, LinkedinIcon, NpmIcon } from "@/components/svg";
 
 export const navMenu = [
-  { id: 1, name: "components", href: "/components" },
-  { id: 2, name: "installation", href: "/installation" },
-  { id: 3, name: "docs", href: "/docs" },
+  { id: 1, name: "docs", href: "/docs" },
+  { id: 2, name: "installation", href: "/docs/installation" },
+  { id: 3, name: "components", href: "/docs/components/accordion" },
 ];
 
 export const components = [
@@ -20,6 +20,10 @@ export const components = [
   { id: 11, name: "accordion", icon: "", featured: true },
   { id: 12, name: "spinner", icon: "", featured: false },
 ];
+
+export const sortedComponents = components.sort((a, b) =>
+  a.name.localeCompare(b.name)
+);
 
 export const footerLinks = [
   {

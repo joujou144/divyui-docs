@@ -15,7 +15,7 @@ export const ComponentBoxGrid = ({
       {list.map((item) => (
         <Link
           key={item.id}
-          href={`/components/${item.name}`}
+          href={`/docs/components/${item.name}`}
           className="component-list-box"
         >
           <p className="text-slate-600">{item.name}</p>

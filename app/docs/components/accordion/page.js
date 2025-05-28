@@ -1,7 +1,7 @@
 export default function ComponentsPage() {
   return (
-    <div>
-      Components page
+    <div className="flex flex-col items-start gap-4 ">
+      <h3 className="border-b">Accordion</h3>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim

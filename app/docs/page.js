@@ -1,3 +1,7 @@
-export default function DocsPage() {
-  return <div>docs page</div>;
+export default function DocsHomePage() {
+  return (
+    <>
+      <div>Docs homepage</div>
+    </>
+  );
 }
