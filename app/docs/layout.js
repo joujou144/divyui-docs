@@ -3,7 +3,7 @@
 export default function DocsLayout({ children }) {
   return (
     <div className="flex w-full min-h-screen">
-      {/* Sidebar - only visible on large screens */}
+      {/* Sidebar */}
       <aside className="hidden lg:block w-56 border-r border-slate-200 p-6">
         Sidebar
       </aside>
