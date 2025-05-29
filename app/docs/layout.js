@@ -1,18 +1,20 @@
-// app/docs/layout.js
+import { Sidebar } from '@/components/sidebar'
 
 export default function DocsLayout({ children }) {
-  return (
-    <div className="flex w-full min-h-screen">
-      {/* Sidebar */}
-      <aside className="hidden lg:block w-56 border-r border-slate-200 p-6">
-        Sidebar
-      </aside>
+    return (
+        <div className="flex min-h-screen w-full">
+            {/* Sidebar */}
+            <aside className="hidden w-56 py-6 pr-6 lg:block">
+                <Sidebar />
+            </aside>
 
-      {/* Main Content */}
-      <div className="flex-1 lg:px-6 py-6 min-h-screen">
-        {children}
-        <div className=" w-full text-red-400">pagination at the bottom</div>
-      </div>
-    </div>
-  );
+            {/* Main Content */}
+            <div className="min-h-screen flex-1 py-6 lg:px-6">
+                {children}
+                <div className="w-full text-red-400">
+                    pagination at the bottom
+                </div>
+            </div>
+        </div>
+    )
 }

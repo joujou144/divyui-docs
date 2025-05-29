@@ -1,5 +1,5 @@
 export * from "./check-icon";
-export * from "./chevron-right";
+export * from "./chevron-left";
 export * from "./close-icon";
 export * from "./copy-icon";
 export * from "./divy-ascii-art";

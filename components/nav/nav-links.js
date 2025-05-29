@@ -12,7 +12,9 @@ export const NavLinks = () => {
       )}
     >
       {navMenu.map(({ id, href, name }) => {
-        const isActive = pathname === href;
+        const isActive =
+          pathname === href ||
+          (name === "components" && pathname.startsWith("/docs/components"));
         return (
           <li key={id}>
             <Link

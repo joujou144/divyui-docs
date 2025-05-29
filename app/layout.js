@@ -18,7 +18,9 @@ export default function RootLayout({ children }) {
       <body className="min-h-screen">
         <PageWrapper>
           <Header />
-          <main className="nunito-regular custom-container">{children}</main>
+          <main className="nunito-regular custom-container text-indigo-950">
+            {children}
+          </main>
           <Footer />
         </PageWrapper>
       </body>
