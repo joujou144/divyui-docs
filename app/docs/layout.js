@@ -1,4 +1,4 @@
-import { Sidebar } from '@/components/sidebar'
+import { Sidebar } from '@/components/sidebar';
 
 export default function DocsLayout({ children }) {
     return (
@@ -9,12 +9,12 @@ export default function DocsLayout({ children }) {
             </aside>
 
             {/* Main Content */}
-            <div className="min-h-screen flex-1 py-6 lg:px-6">
+            <div className="min-h-screen flex-1 py-4 lg:px-6">
                 {children}
                 <div className="w-full text-red-400">
                     pagination at the bottom
                 </div>
             </div>
         </div>
-    )
+    );
 }
