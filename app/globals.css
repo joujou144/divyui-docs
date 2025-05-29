@@ -132,7 +132,7 @@ a {
 
     /*  Nav Menu */
     nav {
-        @apply w-full border-b py-4;
+        @apply w-full border-b py-3;
     }
 
     nav.home {
@@ -183,8 +183,8 @@ a {
         background: var(--color-berry-200);
         display: inline-block;
         position: absolute;
-        bottom: -10px;
-        left: 50%;
+        top: 40%;
+        left: 0;
         transform: translateX(-50%) scale(0);
         border-radius: 9999px;
         transition: transform 0.3s cubic-bezier(0.61, 0, 0.405, 1.63);
